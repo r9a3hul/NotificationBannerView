@@ -165,20 +165,22 @@ final class NotificationBannerView: UIView {
     
     public func dismiss(animated: Bool) {
         DispatchQueue.main.async { [unowned self] in
-            self.topConstraint.constant = -self.height
-            if animated {
-                UIView.animate(withDuration: 0.3, delay: self.delay, options: [.curveEaseInOut], animations: {
-                    self.superview?.layoutIfNeeded()
-                }, completion: { _ in
+            if self.topConstraint != nil {
+                self.topConstraint.constant = -self.height
+                if animated {
+                    UIView.animate(withDuration: 0.3, delay: self.delay, options: [.curveEaseInOut], animations: {
+                        self.superview?.layoutIfNeeded()
+                    }, completion: { _ in
+                        self.removeFromSuperview()
+                        self.dismissHandler?()
+                        print("Banner view dismissed")
+                    })
+                } else {
+                    self.view.frame.origin.y = 0.0
                     self.removeFromSuperview()
                     self.dismissHandler?()
                     print("Banner view dismissed")
-                })
-            } else {
-                self.view.frame.origin.y = 0.0
-                self.removeFromSuperview()
-                self.dismissHandler?()
-                print("Banner view dismissed")
+                }
             }
         }
     }
