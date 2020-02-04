@@ -15,6 +15,7 @@
 		570C05E723E4259200BBF8EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570C05E523E4259200BBF8EE /* LaunchScreen.storyboard */; };
 		570C05F223E4259200BBF8EE /* NotificationBannerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570C05F123E4259200BBF8EE /* NotificationBannerViewTests.swift */; };
 		570C05FD23E4259200BBF8EE /* NotificationBannerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570C05FC23E4259200BBF8EE /* NotificationBannerViewUITests.swift */; };
+		570C060B23E42A5500BBF8EE /* NotificationBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 570C060A23E42A5500BBF8EE /* NotificationBannerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		570C05F823E4259200BBF8EE /* NotificationBannerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationBannerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		570C05FC23E4259200BBF8EE /* NotificationBannerViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBannerViewUITests.swift; sourceTree = "<group>"; };
 		570C05FE23E4259200BBF8EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		570C060A23E42A5500BBF8EE /* NotificationBannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationBannerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				570C05DA23E4259000BBF8EE /* AppDelegate.swift */,
 				570C05DC23E4259000BBF8EE /* SceneDelegate.swift */,
+				570C060A23E42A5500BBF8EE /* NotificationBannerView.xib */,
 				570C05DE23E4259000BBF8EE /* ViewController.swift */,
 				570C05E023E4259000BBF8EE /* Main.storyboard */,
 				570C05E323E4259200BBF8EE /* Assets.xcassets */,
@@ -235,6 +238,7 @@
 				570C05E723E4259200BBF8EE /* LaunchScreen.storyboard in Resources */,
 				570C05E423E4259200BBF8EE /* Assets.xcassets in Resources */,
 				570C05E223E4259000BBF8EE /* Main.storyboard in Resources */,
+				570C060B23E42A5500BBF8EE /* NotificationBannerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NotificationBannerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +458,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NotificationBannerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

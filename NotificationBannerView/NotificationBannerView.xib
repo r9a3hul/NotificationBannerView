@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationBannerView" customModule="NotificationBannerView" customModuleProvider="target">
+            <connections>
+                <outlet property="blurView" destination="fcu-4K-xjl" id="ETj-3y-f7o"/>
+                <outlet property="closeButton" destination="21j-4H-RSv" id="c2F-Pq-fVd"/>
+                <outlet property="closeImageView" destination="Lyi-mB-1iB" id="LNR-0X-UfF"/>
+                <outlet property="titleLabel" destination="sLN-Us-ewO" id="6vM-o7-cp7"/>
+                <outlet property="view" destination="jQ3-N1-qrZ" id="laU-xE-UvY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="jQ3-N1-qrZ">
+            <rect key="frame" x="0.0" y="0.0" width="591" height="43"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcu-4K-xjl" customClass="UIVisualEffectView">
+                    <rect key="frame" x="0.0" y="0.0" width="591" height="43"/>
+                </view>
+                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c09-2J-1uB">
+                    <rect key="frame" x="0.0" y="0.0" width="591" height="43"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7j-d1-Ol2">
+                            <rect key="frame" x="0.0" y="0.0" width="591" height="4"/>
+                            <color key="backgroundColor" red="1" green="0.43137254899999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="4" id="Uve-IX-e6Y"/>
+                            </constraints>
+                        </view>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fPY-IS-liI">
+                            <rect key="frame" x="0.0" y="4" width="591" height="39"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLN-Us-ewO">
+                                    <rect key="frame" x="20" y="26" width="551" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                    <color key="textColor" red="1" green="0.43137254899999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close_16px" translatesAutoresizingMaskIntoConstraints="NO" id="Lyi-mB-1iB" userLabel="closeImage">
+                                    <rect key="frame" x="555" y="11.5" width="16" height="16"/>
+                                    <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    <accessibility key="accessibilityConfiguration" label="Close">
+                                        <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        <bool key="isElement" value="YES"/>
+                                    </accessibility>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="16" id="OhY-Tb-dti"/>
+                                        <constraint firstAttribute="height" constant="16" id="cO1-JS-5Lx"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21j-4H-RSv">
+                                    <rect key="frame" x="547" y="-1" width="44" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="Ic0-ay-drT"/>
+                                        <constraint firstAttribute="height" constant="40" id="sds-L7-bi0"/>
+                                    </constraints>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="21j-4H-RSv" secondAttribute="bottom" id="Kni-Mz-1Y7"/>
+                                <constraint firstAttribute="bottom" secondItem="sLN-Us-ewO" secondAttribute="bottom" constant="13" id="NDB-mH-xsS"/>
+                                <constraint firstItem="sLN-Us-ewO" firstAttribute="leading" secondItem="fPY-IS-liI" secondAttribute="leadingMargin" id="TXH-oe-pjm"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="Lyi-mB-1iB" secondAttribute="trailing" id="mRZ-16-Kdk"/>
+                                <constraint firstAttribute="trailing" secondItem="21j-4H-RSv" secondAttribute="trailing" id="px8-6n-9AK"/>
+                                <constraint firstItem="Lyi-mB-1iB" firstAttribute="centerY" secondItem="fPY-IS-liI" secondAttribute="centerY" id="wp0-OV-3CF"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="sLN-Us-ewO" secondAttribute="trailing" id="xv5-6D-tIE"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="C7j-d1-Ol2" secondAttribute="trailing" id="8Ze-Ar-WJC"/>
+                        <constraint firstItem="C7j-d1-Ol2" firstAttribute="top" secondItem="c09-2J-1uB" secondAttribute="top" id="aBg-cd-62K"/>
+                        <constraint firstItem="C7j-d1-Ol2" firstAttribute="leading" secondItem="c09-2J-1uB" secondAttribute="leading" id="dSj-r4-D3b"/>
+                        <constraint firstAttribute="bottom" secondItem="fPY-IS-liI" secondAttribute="bottom" id="fYE-bm-1L2"/>
+                        <constraint firstItem="fPY-IS-liI" firstAttribute="leading" secondItem="c09-2J-1uB" secondAttribute="leading" id="htP-5M-p9o"/>
+                        <constraint firstAttribute="trailing" secondItem="fPY-IS-liI" secondAttribute="trailing" id="uyb-si-zVV"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19t-uO-ZOw">
+                    <rect key="frame" x="0.0" y="42" width="591" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Egg-4A-tNl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fcu-4K-xjl" secondAttribute="bottom" id="33k-Kl-KSR"/>
+                <constraint firstItem="fcu-4K-xjl" firstAttribute="top" secondItem="jQ3-N1-qrZ" secondAttribute="top" id="5Jl-p3-ZUi"/>
+                <constraint firstAttribute="bottom" secondItem="19t-uO-ZOw" secondAttribute="bottom" id="8fA-Ia-bHJ"/>
+                <constraint firstItem="19t-uO-ZOw" firstAttribute="leading" secondItem="jQ3-N1-qrZ" secondAttribute="leading" id="9YG-tm-smJ"/>
+                <constraint firstAttribute="trailing" secondItem="fcu-4K-xjl" secondAttribute="trailing" id="R0q-Vr-FV7"/>
+                <constraint firstAttribute="trailing" secondItem="c09-2J-1uB" secondAttribute="trailing" id="X30-7e-yI5"/>
+                <constraint firstAttribute="trailing" secondItem="19t-uO-ZOw" secondAttribute="trailing" id="YFM-da-nPU"/>
+                <constraint firstItem="fcu-4K-xjl" firstAttribute="leading" secondItem="jQ3-N1-qrZ" secondAttribute="leading" id="ah0-Px-d7n"/>
+                <constraint firstAttribute="bottom" secondItem="c09-2J-1uB" secondAttribute="bottom" id="bIJ-fp-JZU"/>
+                <constraint firstItem="c09-2J-1uB" firstAttribute="leading" secondItem="jQ3-N1-qrZ" secondAttribute="leading" id="mOq-ij-rUd"/>
+                <constraint firstItem="c09-2J-1uB" firstAttribute="top" secondItem="jQ3-N1-qrZ" secondAttribute="top" id="q0B-LA-OcV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="sKW-Eu-yg9"/>
+            <point key="canvasLocation" x="-267.39130434782612" y="-310.37946428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_16px" width="16" height="16"/>
+    </resources>
+</document>
