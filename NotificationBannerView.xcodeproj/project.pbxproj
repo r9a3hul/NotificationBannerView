@@ -16,6 +16,7 @@
 		570C05F223E4259200BBF8EE /* NotificationBannerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570C05F123E4259200BBF8EE /* NotificationBannerViewTests.swift */; };
 		570C05FD23E4259200BBF8EE /* NotificationBannerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570C05FC23E4259200BBF8EE /* NotificationBannerViewUITests.swift */; };
 		570C060B23E42A5500BBF8EE /* NotificationBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 570C060A23E42A5500BBF8EE /* NotificationBannerView.xib */; };
+		57F8E79023E97E0A00EA05CB /* NotificationBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8E78F23E97E0A00EA05CB /* NotificationBannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		570C05FC23E4259200BBF8EE /* NotificationBannerViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBannerViewUITests.swift; sourceTree = "<group>"; };
 		570C05FE23E4259200BBF8EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		570C060A23E42A5500BBF8EE /* NotificationBannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationBannerView.xib; sourceTree = "<group>"; };
+		57F8E78F23E97E0A00EA05CB /* NotificationBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				570C05E323E4259200BBF8EE /* Assets.xcassets */,
 				570C05E523E4259200BBF8EE /* LaunchScreen.storyboard */,
 				570C05E823E4259200BBF8EE /* Info.plist */,
+				57F8E78F23E97E0A00EA05CB /* NotificationBannerView.swift */,
 			);
 			path = NotificationBannerView;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				570C05DF23E4259000BBF8EE /* ViewController.swift in Sources */,
 				570C05DB23E4259000BBF8EE /* AppDelegate.swift in Sources */,
 				570C05DD23E4259000BBF8EE /* SceneDelegate.swift in Sources */,
+				57F8E79023E97E0A00EA05CB /* NotificationBannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
