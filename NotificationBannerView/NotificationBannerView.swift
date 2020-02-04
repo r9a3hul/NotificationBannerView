@@ -109,6 +109,15 @@ final class NotificationBannerView: UIView {
         }
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        switch traitCollection.userInterfaceStyle {
+        case .dark:
+            blurView.effect = UIBlurEffect(style: .dark)
+        default:
+            blurView.effect = UIBlurEffect(style: .extraLight)
+        }
+    }
+    
     public func show(message: String,
                      in vc: UIViewController,
                      animated: Bool = true,
