@@ -107,11 +107,11 @@
 				570C05DC23E4259000BBF8EE /* SceneDelegate.swift */,
 				570C060A23E42A5500BBF8EE /* NotificationBannerView.xib */,
 				570C05DE23E4259000BBF8EE /* ViewController.swift */,
+				57F8E78F23E97E0A00EA05CB /* NotificationBannerView.swift */,
 				570C05E023E4259000BBF8EE /* Main.storyboard */,
 				570C05E323E4259200BBF8EE /* Assets.xcassets */,
 				570C05E523E4259200BBF8EE /* LaunchScreen.storyboard */,
 				570C05E823E4259200BBF8EE /* Info.plist */,
-				57F8E78F23E97E0A00EA05CB /* NotificationBannerView.swift */,
 			);
 			path = NotificationBannerView;
 			sourceTree = "<group>";

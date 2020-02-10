@@ -19,7 +19,7 @@ final class NotificationBannerView: UIView {
     
     private let bannerViewTag = 8494
     private var delay = 1.0
-    private let height: CGFloat = 44.0
+    private var height: CGFloat = 44.0
     private var topConstraint: NSLayoutConstraint!
     
     public var dismissHandler: (() -> Void)? = nil
@@ -75,11 +75,10 @@ final class NotificationBannerView: UIView {
     }
     
     private func initialize() {
-        Bundle.main.loadNibNamed("\(NotificationBannerView.self)", owner: self)
+        //bundle.loadNibNamed("\(NotificationBannerView.self)", owner: self)
         addSubview(view)
         // setup view
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalToConstant: height).isActive = true
         NSLayoutConstraint.activate([
             view.leadingAnchor.constraint(equalTo: leadingAnchor),
             view.trailingAnchor.constraint(equalTo: trailingAnchor)
@@ -94,22 +93,16 @@ final class NotificationBannerView: UIView {
         font = .systemFont(ofSize: 13.0, weight: .medium)
         textColor = UIColor.init(red: 255.0/255.0, green: 110.0/255.0, blue: 110.0/255.0, alpha: 1.0)
         bgColor = UIView().backgroundColor
-        closeImage = UIImage(named: "close_16px")
+        //closeImage = FUIIconLibrary.system.close
+        closeImageView.tintColor = .black
+        
+        titleLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.size.width - 40.0
         
         tag = bannerViewTag
         translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func applyBlurEffect() {
-        switch traitCollection.userInterfaceStyle {
-        case .dark:
-            blurView.effect = UIBlurEffect(style: .dark)
-        default:
-            blurView.effect = UIBlurEffect(style: .extraLight)
-        }
-    }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         switch traitCollection.userInterfaceStyle {
         case .dark:
             blurView.effect = UIBlurEffect(style: .dark)
@@ -133,20 +126,27 @@ final class NotificationBannerView: UIView {
             }
             
             self.text = message
+            self.titleLabel.sizeToFit()
+            self.view.layoutIfNeeded()
+            self.height = self.titleLabel.frame.size.height + 27.0
             self.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: self.height)
+            self.view.heightAnchor.constraint(equalToConstant: self.height).isActive = true
             vc.view.addSubview(self)
             
             let safeGuide = vc.view.safeAreaLayoutGuide
             self.heightAnchor.constraint(equalToConstant: self.height).isActive = true
+            let bottomConstraint = self.bottomAnchor.constraint(equalTo: safeGuide.topAnchor)
             NSLayoutConstraint.activate([
                 self.leadingAnchor.constraint(equalTo: safeGuide.leadingAnchor),
                 self.trailingAnchor.constraint(equalTo: safeGuide.trailingAnchor),
+                bottomConstraint
             ])
             vc.view.layoutIfNeeded()
             
             // save constraint for later use in animation
             self.topConstraint = self.topAnchor.constraint(equalTo: safeGuide.topAnchor)
             let block = {
+                bottomConstraint.isActive = false
                 NSLayoutConstraint.activate([
                     self.topConstraint
                 ])

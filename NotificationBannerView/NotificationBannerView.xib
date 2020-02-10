@@ -56,7 +56,7 @@
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21j-4H-RSv">
-                                    <rect key="frame" x="547" y="-1" width="44" height="40"/>
+                                    <rect key="frame" x="547" y="-0.5" width="44" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="44" id="Ic0-ay-drT"/>
                                         <constraint firstAttribute="height" constant="40" id="sds-L7-bi0"/>
@@ -64,11 +64,11 @@
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="21j-4H-RSv" secondAttribute="bottom" id="Kni-Mz-1Y7"/>
                                 <constraint firstAttribute="bottom" secondItem="sLN-Us-ewO" secondAttribute="bottom" constant="13" id="NDB-mH-xsS"/>
                                 <constraint firstItem="sLN-Us-ewO" firstAttribute="leading" secondItem="fPY-IS-liI" secondAttribute="leadingMargin" id="TXH-oe-pjm"/>
                                 <constraint firstAttribute="trailingMargin" secondItem="Lyi-mB-1iB" secondAttribute="trailing" id="mRZ-16-Kdk"/>
                                 <constraint firstAttribute="trailing" secondItem="21j-4H-RSv" secondAttribute="trailing" id="px8-6n-9AK"/>
+                                <constraint firstItem="21j-4H-RSv" firstAttribute="centerY" secondItem="Lyi-mB-1iB" secondAttribute="centerY" id="wiB-DA-pZh"/>
                                 <constraint firstItem="Lyi-mB-1iB" firstAttribute="centerY" secondItem="fPY-IS-liI" secondAttribute="centerY" id="wp0-OV-3CF"/>
                                 <constraint firstAttribute="trailingMargin" secondItem="sLN-Us-ewO" secondAttribute="trailing" id="xv5-6D-tIE"/>
                             </constraints>
